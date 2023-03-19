@@ -4,58 +4,13 @@
     box-sizing: border-box;
 }
 body{
+    font-family: roboto;
     background-color:teal;
 display: inline-block;
 /* display: flex; */
 column-width: 2000px;
 }
-.hero-title{
-    font-size: 36px;
-    font-family: Raleway, sans-serif;
-        font-weight: 700;
-        text-align: center;
-        line-height: 1.19;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: black;
-        text-align: center;
-}
-.books{
-    display: flex;
-    flex-wrap: wrap;
-           gap: 10px;
-}
-h2{
-    color: greenyellow;
-}
-/* .textbook:nth-child(3n + 2){
-    margin:0 10px;
-    /* padding:5px; */
-*/
-.textbook{
-    padding:30px;
-}
 
-.ukr-books{
-    display: flex;
- gap: 30px;
-}
-.pidruch{
-    display: inline-block;
-    width: 100px;
-    height: 50px;
-    background-color: blue;
-    color: white;
-    font-size: 24px;
-        font-family: Raleway, sans-serif;
-        font-weight: 700;
-        text-align: center;
-        line-height: 1.19;
-        text-decoration: none;
-        text-transform: uppercase;
-        text-align: center;
-       
-}
 .weather{
     display: flex;
     flex-direction: column;
