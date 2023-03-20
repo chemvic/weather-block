@@ -31,9 +31,9 @@ getLocation();
 function drawWeather(data) {
     console.log(data);
    
-    const markup = `<span class="degree">${data.main.temp}°</span><span class="description">|${data.weather[0].main}</span>
-<span class="location">${data.name}</span>
-<img src="./img/sunny.svg" alt="" class="weatherImg" width="165px" height="156px">
+    const markup = `<div class="info"><span class="degree">${data.main.temp}°</span><div class="navigation"><span class="description">|${data.weather[0].description}</span>
+<span class="location">${data.name}</span></div></div>
+<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="weather icon" class="weatherImg" width="365px" height="356px">
 <p class="date">${date.toDateString()}</p>
 <a class="weekWeather" href="https://openweathermap.org/city/${data.id}">weather for week</a>`;
     weatherEl.innerHTML=markup;  

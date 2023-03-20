@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 body{
+    padding: 16px;
     font-family: roboto;
     background-color:teal;
 display: inline-block;
@@ -12,6 +13,7 @@ column-width: 2000px;
 }
 
 .weather{
+
     display: flex;
     flex-direction: column;
     padding: 40px 0 60px;
@@ -21,11 +23,22 @@ column-width: 2000px;
     background-color: #4440F6;
     color: #ffffff;
     border-radius: 4px;
+    margin-right: auto;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
+}
+.navigation{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
 }
 
 .weatherImg{
-    margin: 90px 0;
+    /* margin: 90px 0; */
 }
 .date{
     margin-bottom: 28px;
