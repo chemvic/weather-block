@@ -37,14 +37,26 @@ column-width: 2000px;
     margin-left: 20px;
 }
 
-.weatherImg{
-    /* margin: 90px 0; */
+/* .weatherImg{
+    margin: 90px 0;
+} */
+.dayOfWeek{
+    font-size:38px ;
+    margin: 0;
 }
 .date{
-    margin-bottom: 28px;
+    margin: 0 0 28px;
     font-size: 38px;
 }
-.weekWeather{
+
+.degree{
+font-size: 64px;
+}
+.location{
+    font-size: 20px;
+}
+
+/* .weekWeather{
     display: flex;
     width: 177px;
     height: 42px;
@@ -57,10 +69,4 @@ column-width: 2000px;
   cursor: pointer;
   text-decoration: none; 
   font-size: 20px;
-}
-.degree{
-font-size: 64px;
-}
-.location{
-    font-size: 20px;
-}
+} */

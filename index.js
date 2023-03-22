@@ -1,7 +1,12 @@
 const weatherEl = document.querySelector('.weather');
 
 let geolocation = navigator.geolocation;
+
 const date = new Date();
+const dayOfWeek = date.toLocaleDateString('en-US',{ weekday: 'short' });
+const options = { day: 'numeric', month: 'short', year: 'numeric' };
+const formattedDate = date.toLocaleDateString('en-GB', options);
+
 
 function getLocation() {
   geolocation.getCurrentPosition(showLocation);
@@ -26,15 +31,19 @@ function getWeather(lat, lon) {
     
 }
 
+// Для погоды на неделю
+// http://api.openweathermap.org/data/2.5/forecast/
+// daily ? q = London & cnt=7 & appid={ YOUR_API_KEY }
+
 getLocation();
 
 function drawWeather(data) {
-    console.log(data);
-   
+     
     const markup = `<div class="info"><span class="degree">${data.main.temp}°</span><div class="navigation"><span class="description">|${data.weather[0].description}</span>
 <span class="location">${data.name}</span></div></div>
 <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="weather icon" class="weatherImg" width="365px" height="356px">
-<p class="date">${date.toDateString()}</p>
-<a class="weekWeather" href="https://openweathermap.org/city/${data.id}">weather for week</a>`;
+<p class="dayOfWeek">${dayOfWeek}</p>
+<p class="date">${formattedDate}</p>`;
+{/* <a class="weekWeather" href="https://openweathermap.org/city/${data.id}">weather for week</a> */}
     weatherEl.innerHTML=markup;  
 }
