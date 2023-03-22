@@ -3,7 +3,7 @@ const weatherEl = document.querySelector('.weather');
 let geolocation = navigator.geolocation;
 
 const date = new Date();
-const dayOfWeek = date.toLocaleDateString('en-US',{ weekday: 'short' });
+const dayOfWeek = date.toLocaleDateString('en-GB',{ weekday: 'short' });
 const options = { day: 'numeric', month: 'short', year: 'numeric' };
 const formattedDate = date.toLocaleDateString('en-GB', options);
 
